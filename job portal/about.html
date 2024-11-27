@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          // Fade in review boxes
+          $(".title").each(function (index) {
+            $(this).delay(300 * index).fadeIn(1000);
+          });
+        });
+      </script>
+      <script>
+        // jQuery code for parallax scrolling
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                $(".about img").css({
+                    transform: "translate3d(0, " + scroll / 2 + "px, 0)"
+                });
+            });
+        });
+    </script>
+     <style>
+        /* Add your styles here */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* .section-title {
+            text-align: center;
+            padding: 100px 0;
+            background: #f4f4f4;
+        } */
+
+        .about {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .about img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* .box {
+            padding: 50px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 1;
+        } */
+
+        /* Add other styles as needed */
+    </style>
+     
+    
+</head>
+<body>
+    <header class="header">
+
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+            <a href="home.html" class="logo"><i class="fas fa-briefcase"></i>jobHunt.</a>
+            <nav class="navbar">
+                <a href="home.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="jobs.html">ALL JOBS</a>
+                <a href="contact.html">CONTACT US</a>
+                <a href="login.html">ACCOUNT</a>
+            </nav>
+             <a href="#" class="btn">post job</a>
+        </section>
+    </header> 
+    <div class="rotate-element">&#x21bb;</div>
+    <div class="section-title">About Us</div>
+    <section class="about">
+        <img src="job.png" alt="">
+        <div class="box">
+            <div class="element hidden">
+            <h3>why choose us?</h3>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Expedita deserunt cupiditate molestias necessitatibus 
+                 fugit. Debitis mollitia quisquam asperiores dolores m
+                 odi voluptate excepturi aut quis aliquid, recusandae,
+                 doloremque eligendi dolor tempore tempora, eius vero?
+                 Quasi, ad! Molestiae possimus, ex velit pariatur vol
+                 uptatibus quaerat explicabo aspernatur hic maxime qu
+                 am ullam perferendis amet!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Quia, exercitationem maiores pariatur ea perferendis 
+                 nulla molestiae repellendus sed nihil commodi id temp
+                 oribus vero in distinctio ipsum.Blanditiis nulla aliq
+                 uid eligendi.</p>
+                 
+                    <a href="contact.html" class="btn"> contact us </a>
+                </div>
+        </div>
+    </section>
+
+    <div class="section-title">Top reviews</div>
+    <section class="reviews">
+        <div class="box-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3 class="title">amazing results</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea eum
+                   corporis tempnesciunt impedit debitis accusantium!.</p>
+                   <div class="user">
+                    <img src="person1.jpg" alt="">
+                    <div>
+                        <h3>john deo</h3>
+                        <span>web designer</span>
+                    </div>
+                   </div>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3 class="title">easy to use</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea eum
+                   corporis tempnesciunt impedit debitis accusantium!.</p>
+                   <div class="user">
+                    <img src="person2" alt="">
+                    <div>
+                        <h3>john deo</h3>
+                        <span>web designer</span>
+                    </div>
+                   </div>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3 class="title">got selected</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea eum
+                   corporis tempnesciunt impedit debitis accusantium!.</p>
+                   <div class="user">
+                    <img src="person3" alt="">
+                    <div>
+                        <h3>john deo</h3>
+                        <span>web designer</span>
+                    </div>
+                   </div>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3 class="title">nice experience</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea eum
+                   corporis tempnesciunt impedit debitis accusantium!.</p>
+                   <div class="user">
+                    <img src="person4.jpg" alt="">
+                    <div>
+                        <h3>john deo</h3>
+                        <span>web designer</span>
+                    </div>
+                   </div>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3 class="title">wide range</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea eum
+                   corporis tempnesciunt impedit debitis accusantium!.</p>
+                   <div class="user">
+                    <img src="person5.jpeg" alt="">
+                    <div>
+                        <h3>john deo</h3>
+                        <span>web designer</span>
+                    </div>
+                   </div>
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3 class="title">super results</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea eum
+                   corporis tempnesciunt impedit debitis accusantium!.</p>
+                   <div class="user">
+                    <img src="person6.png" alt="">
+                    <div>
+                        <h3>john deo</h3>
+                        <span>web designer</span>
+                    </div>
+                   </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+     
+      var elementPos = $('.element').offset().top;
+
+      
+      var windowHeight = $(window).height();
+
+     
+      var revealPoint = elementPos - windowHeight + (windowHeight / 2);
+
+      
+      if ($(window).scrollTop() > revealPoint) {
+       
+        $('.element').addClass('revealed');
+      }
+    });
+  });
+</script>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <section class="grid">
+            <div class="box">
+               <h3>quick links</h3>
+               <a href="home.html"><i class="fas fa-angle-right"></i>HOME</a>
+                <a href="about.html"><i class="fas fa-angle-right"></i>ABOUT</a>
+                <a href="jobs.html"><i class="fas fa-angle-right"></i>ALL JOBS</a>
+                <a href="contact.html"><i class="fas fa-angle-right"></i>CONTACT US</a>
+                <a href="#"><i class="fas fa-angle-right"></i>filter search</a>
+            </div>
+            <div class="box">
+            <h3>extra links</h3>
+             <a href="#"><i class="fas fa-angle-right"></i>account</a>
+             <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
+             <a href="resigter.html"><i class="fas fa-angle-right"></i>resigter</a>
+             <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
+         </div>
+         <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+            <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+         </div>
+
+        </section>
+        <div class="credit">&copy; copyright @2023 by <span>web designer</span> | All rights reserved!</div>
+    </footer>
+</body>
+</html>

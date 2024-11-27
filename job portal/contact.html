@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Add animations and form validation
+        $(document).ready(function () {
+            // Fade in the entire contact section
+            $(".contact").fadeIn(1000);
+
+            // Bounce effect for the form
+            $("#contactForm").effect("bounce", { times: 3 }, 300);
+        });
+    </script>
+    <style>
+        .box-container {
+          text-align: center;
+        }
+        .box {
+          display: none; 
+          border: 1px solid #ddd;
+          margin: 10px;
+          padding: 10px;
+        }
+      </style>
+    <script>
+      $(document).ready(function () {
+        
+        $(".box").each(function (index) {
+          $(this).delay(300 * index).fadeIn(1000);
+        });
+      });
+    </script>
+    <script>
+        function validateform1()
+        {
+            var v_fn;
+            var v_email;
+            var v_mobile;
+           
+            var name = document.getElementById('name');
+            var nameerror = document.getElementById('nameerror');
+
+            var email = document.getElementById('email');
+            var emailerror = document.getElementById('emailerror');
+
+            
+            if (name.value == "") {
+                name.style.borderWidth = "3px";
+                name.style.borderColor = "red";
+                nameerror.innerHTML = "Fullname is a required field.";
+                nameerror.style.color = "red";
+                var v_fn = false;
+            } else {
+                var reg = /^[A-Za-z]{2,30}$/;
+                if (name.value.match(reg)) {
+                    name.style.borderWidth = "3px";
+                    nameerror.innerHTML = "";
+                    name.style.borderColor = "green";
+                    v_fn = true;
+                } else {
+                    name.style.borderWidth = "3px";
+                    nameerror.style.color = "red";
+                   // nameerror.innerHTML = "Name contains only letters and minimum length is 2 and maximum length is 30";
+                    document.getElementById('nameerror').innerHTML = "Name contains only letters and minimum length is 2 and maximum length is 30";
+                    name.style.borderColor = "red";
+                    v_fn = false;
+                }
+            }
+            if (email.value == "") {
+                email.style.borderWidth = "3px";
+                email.style.borderColor = "red";
+                emailerror.innerHTML = "Email address is a required field.";
+                emailerror.style.color = "red";
+                var v_email = false;
+            } else {
+                var reg = /^[\w\.]+@([\w]+\.)+[\w]{2,4}$/;
+                if (email.value.match(reg)) {
+                    email.style.borderWidth = "3px";
+                    emailerror.innerHTML = "";
+                    email.style.borderColor = "green";
+                    v_email = true;
+                } else {
+                    email.style.borderWidth = "3px";
+                    emailerror.style.color = "red";
+                    emailerror.innerHTML ="Invalid email address";
+                    email.style.borderColor = "red";
+                    v_email = false;
+                }
+            } 
+
+            if (mobile.value == "") {
+                mobile.style.borderWidth = "3px";
+                mobile.style.borderColor = "red";
+                mobile_error.innerHTML = "Mobile Number is a required field.";
+                mobile_error.style.color = "red";
+                var v_mobile = false;
+            } else {
+                var reg = /^[0-9]{10}$/;
+                if (mobile.value.match(reg)) {
+                    mobile.style.borderWidth = "3px";
+                    mobile_error.innerHTML = "";
+                    mobile.style.borderColor = "green";
+                    v_mobile = true;
+                } else {
+                    mobile.style.borderWidth = "3px";
+                    mobile_error.style.color = "red";
+                    mobile_error.innerHTML = "Mobile number contains only 10 digits";
+                    mobile.style.borderColor = "red";
+                    v_mobile = false;
+                }
+            }  
+            if (v_fn == true && v_email == true && v_mobile == true ) {
+                return true;
+            } else {
+                event.preventDefault(); 
+                return false;
+            }
+
+        }
+
+        
+            </script>
+
+    
+</head>
+<body>
+    <header class="header">
+
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+            <a href="home.html" class="logo"><i class="fas fa-briefcase"></i>jobHunt.</a>
+            <nav class="navbar">
+                <a href="home.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="jobs.html">ALL JOBS</a>
+                <a href="contact.html">CONTACT US</a>
+                <a href="login.html">ACCOUNT</a>
+            </nav>
+             <a href="#" class="btn">post job</a>
+        </section>
+    </header>
+
+    <div class="section-title1">contact us</div>
+    <section class="contact">
+         <div class="box-container">
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <a href="tel:1234567890">123-456-7890</a>
+                <a href="tel:111222333">111-222-333</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:xyz@gmail.com">xyz@gmail.com</a>
+                <a href="mailto:abc@gmail.com">abc@gmail.com</a>
+                
+            </div>
+            <div class="box">
+                <i class="fas fa-map-marker-alt"></i>
+                <a href="#">flat no .1, a-1 building, jogeshwari, mumbai, india - 400410</a>
+            </div>
+           
+         </div>
+
+         <form action="" method="post" id="contactform" onsubmit="return (validateform1())">
+            <h3>drop your message</h3>
+            <div class="flex">
+                <div class="box">
+                    <p>name <span>*</span></p>
+                    <input type="text" name="name" id="name" required maxlength="20" placeholder="enter your name" class="input">
+                    <span id="nameerror"></span>
+                </div>
+
+                <div class="box">
+                    <p>email <span>*</span></p>
+                    <input type="text" name="email"  id="email" maxlength="50" placeholder="enter your email" class="input">
+                    <span id="emailerror"></span>
+                </div>
+
+                <div class="box">
+                    <p>number <span>*</span></p>
+                    <input type="text" name="number" id="moblie" required  min="0" max="9999999999" maxlength="20" placeholder="enter your number" class="input">
+                    <span id="mobile_error"></span>
+                </div>
+
+                <div class="box">
+                    <p>role <span>*</span></p>
+                    <select name="role" class="input">
+                        <option value="employee">job seeker (employee)</option>
+                        <option value="employee">job provider (employee)</option>
+                    </select>
+                </div>
+            </div>
+            <p>message<span>*</span></p>
+            <textarea name="message" class="input" required maxlength="1000" placeholder="enter your message" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" name="send" class="btn" onsubmit="return (validateform1())">
+         </form>
+    </section>
+    
+
+    <!-- footer -->
+    <footer class="footer">
+        <section class="grid">
+            <div class="box">
+               <h3>quick links</h3>
+               <a href="home.html"><i class="fas fa-angle-right"></i>HOME</a>
+                <a href="about.html"><i class="fas fa-angle-right"></i>ABOUT</a>
+                <a href="jobs.html"><i class="fas fa-angle-right"></i>ALL JOBS</a>
+                <a href="contact.html"><i class="fas fa-angle-right"></i>CONTACT US</a>
+                <a href="#"><i class="fas fa-angle-right"></i>filter search</a>
+            </div>
+            <div class="box">
+            <h3>extra links</h3>
+             <a href="#"><i class="fas fa-angle-right"></i>account</a>
+             <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
+             <a href="resigter.html"><i class="fas fa-angle-right"></i>resigter</a>
+             <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
+         </div>
+         <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+            <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+         </div>
+
+        </section>
+        <div class="credit">&copy; copyright @2023 by <span>web designer</span> | All rights reserved!</div>
+    </footer>
+</body>
+</html>

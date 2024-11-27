@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+           
+            $('.job-title').addClass('animate');
+        });
+    </script>
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+     <script>
+         $(document).ready(function () {
+             $('.job-title').addClass('show');
+             
+             setInterval(function() {
+                 var colors = ['#483d8b ', '#7e5e60 ', '#367588', '#264348']; 
+                 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+                 $('.job-title.show').css('color', randomColor);
+             }, 2000); 
+         });
+     </script>
+    <!-- tranformation -->
+    <style>
+        .job-title {
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .job-title.show {
+            opacity: 1;
+            transform: translateX(0);
+            transition: transform 1s;
+        }
+    </style>
+    <!-- color changing -->
+    <style>
+        .job-title {
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: moveLeftRight 4s linear infinite;
+        }
+
+        @keyframes moveLeftRight {
+            0%, 100% {
+                left: 0;
+            }
+            50% {
+                left: calc(20% - 10vw);
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="header">
+
+        <section class="flex">
+            <div id="menu-btn" class="fas fa-bars-staggered"></div>
+
+            <a href="home.html" class="logo"><i class="fas fa-briefcase"></i>jobHunt.</a>
+            <nav class="navbar">
+                <a href="home.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="jobs.html">ALL JOBS</a>
+                <a href="contact.html">CONTACT US</a>
+                <a href="login.html">ACCOUNT</a>
+            </nav>
+             <a href="#" class="btn">post job</a>
+        </section>
+    </header>
+
+    <!-- home starts -->
+    <div class="home-container">
+        <section class="home">
+            <form action="" method="post">
+                <h3 class="job-title">find your next job</h3>
+                <p>job title<span>*</span></p> 
+                <input type="text" name="title" placeholder="keyword,category or company" required maxlength="20" class="input">
+                <p>job location </p> 
+                <input type="text" name="location" placeholder="city,state or country" required maxlength="50" class="input">
+                <input type="submit" value="search job" name="search" class="btn">
+            </form>
+        </section>
+    </div>
+
+     <!-- home ends -->
+     <!-- category -->
+     <section class="category">
+        <h1 class="heading">job categories</h1>
+        <div class="box-container">
+            <a href="#" class="box1">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>development</h3>
+                    <span>2200</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>designer</h3>
+                    <span>500 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-code"></i>
+                <div>
+                    <h3>teacher</h3>
+                    <span>1500 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-bullhorn"></i>
+                <div>
+                    <h3>marketing</h3>
+                    <span>1200 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-headset"></i>
+                <div>
+                    <h3>service</h3>
+                    <span>3100 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-wrench"></i>
+                <div>
+                    <h3>engineer</h3>
+                    <span>400 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-hand-holding-dollar"></i>
+                <div>
+                    <h3>finance</h3>
+                    <span>1000 jobs</span>
+                </div>
+            </a>
+
+            <a href="#" class="box1">
+                <i class="fas fa-person-digging"></i>
+                <div>
+                    <h3>labour</h3>
+                    <span>4000 jobs</span>
+                </div>
+            </a>
+        </div>
+     
+       
+</section>
+<script>
+    $(document).ready(function () {
+       
+        $(".box1").hide();
+        $(".box1").each(function (index) {
+            $(this).delay(300 * index).fadeIn(500);
+        });
+    });
+</script>
+
+     <!-- category end -->
+    
+
+    <!-- footer -->
+    <footer class="footer">
+        <section class="grid">
+            <div class="box">
+               <h3>quick links</h3>
+               <a href="home.html"><i class="fas fa-angle-right"></i>HOME</a>
+                <a href="about.html"><i class="fas fa-angle-right"></i>ABOUT</a>
+                <a href="jobs.html"><i class="fas fa-angle-right"></i>ALL JOBS</a>
+                <a href="contact.html"><i class="fas fa-angle-right"></i>CONTACT US</a>
+                <a href="#"><i class="fas fa-angle-right"></i>filter search</a>
+            </div>
+            <div class="box">
+            <h3>extra links</h3>
+             <a href="#"><i class="fas fa-angle-right"></i>account</a>
+             <a href="login.html"><i class="fas fa-angle-right"></i>login</a>
+             <a href="resigter.html"><i class="fas fa-angle-right"></i>resigter</a>
+             <a href="#"><i class="fas fa-angle-right"></i>dashboard</a>
+         </div>
+         <div class="box">
+            <h3>follow us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+            <a href="#"><i class="fab fa-youtube"></i>youtube</a>
+         </div>
+
+        </section>
+        <div class="credit">&copy; copyright @2023 by <span>web designer</span> | All rights reserved!</div>
+    </footer>
+</body>
+</html>
